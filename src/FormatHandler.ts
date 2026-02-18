@@ -35,7 +35,7 @@ export class FormatDefinition implements IFormatDefinition {
   public readonly format: string;
   public readonly extension: string;
   public readonly mime: string;
-  public readonly category?: string[] | string
+  public readonly category?: string[] | string;
 
   constructor(
     name: string, 
