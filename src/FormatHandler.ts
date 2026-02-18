@@ -107,7 +107,7 @@ export class FormatDefinition implements IFormatDefinition {
         this.name = name;
         return this;
       },
-      withformat(format: string) {
+      withFormat(format: string) {
         this.format = format;
         return this;
       },

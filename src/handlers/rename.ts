@@ -95,11 +95,11 @@ export const renameZipHandler = renameHandler("renamezip", [
     internal: "xpi"
   },
   CommonFormats.ZIP.builder("love").allowFrom()
-    .withformat("love").withExt("love").named("LÖVE Game Package"),
+    .withFormat("love").withExt("love").named("LÖVE Game Package"),
   CommonFormats.ZIP.builder("osz").allowFrom()
-    .withformat("osz").withExt("osz").named("osu! Beatmap"),
+    .withFormat("osz").withExt("osz").named("osu! Beatmap"),
   CommonFormats.ZIP.builder("osk").allowFrom()
-    .withformat("osk").withExt("osk").named("osu! Skin"),
+    .withFormat("osk").withExt("osk").named("osu! Skin"),
   {
     name: "Java Archive",
     format: "jar",
