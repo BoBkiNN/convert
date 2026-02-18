@@ -22,17 +22,11 @@ class meydaHandler implements FormatHandler {
   async init () {
 
     const dummy = document.createElement("audio");
-    this.supportedFormats.push({
-      name: "Waveform Audio File Format",
-      format: "wav",
-      extension: "wav",
-      mime: "audio/wav",
-      from: dummy.canPlayType("audio/wav") !== "",
-      to: true,
-      internal: "audio",
-      category: "audio",
-      lossless: false // Lossy reconstruction
-    });
+    this.supportedFormats.push(
+      CommonFormats.WAV.builder("audio")
+        .allowFrom(dummy.canPlayType("audio/wav") !== "")
+    );
+    
     if (dummy.canPlayType("audio/mpeg")) this.supportedFormats.push(
       // lossless=false, lossy reconstruction 
       CommonFormats.MP3.supported("audio", true, false)

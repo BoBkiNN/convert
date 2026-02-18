@@ -109,6 +109,13 @@ const CommonFormats = {
         "audio/mpeg",
         Category.AUDIO
     ),
+    WAV: new FormatDefinition(
+        "Waveform Audio File Format",
+        "wav",
+        "wav",
+        "audio/wav",
+        Category.AUDIO
+    ),
     // video
     MP4: new FormatDefinition(
         "MPEG-4 Part 14",
