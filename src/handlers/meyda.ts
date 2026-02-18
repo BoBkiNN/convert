@@ -34,17 +34,9 @@ class meydaHandler implements FormatHandler {
     if (dummy.canPlayType("audio/ogg")) this.supportedFormats.push(
       CommonFormats.OGG.builder("audio").allowFrom()
     );
-    if (dummy.canPlayType("audio/flac")) this.supportedFormats.push({
-      name: "Free Lossless Audio Codec",
-      format: "flac",
-      extension: "flac",
-      mime: "audio/flac",
-      from: true,
-      to: false,
-      internal: "audio",
-      category: "audio",
-      lossless: false // Lossy reconstruction
-    });
+    if (dummy.canPlayType("audio/flac")) this.supportedFormats.push(
+      CommonFormats.FLAC.builder("audio").allowFrom()
+    );
     dummy.remove();
 
     this.#audioContext = new AudioContext({

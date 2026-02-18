@@ -123,6 +123,13 @@ const CommonFormats = {
         "audio/ogg",
         Category.AUDIO
     ),
+    FLAC: new FormatDefinition(
+        "Free Lossless Audio Codec",
+        "flac",
+        "flac",
+        "audio/flac",
+        Category.AUDIO
+    ),
     // video
     MP4: new FormatDefinition(
         "MPEG-4 Part 14",
