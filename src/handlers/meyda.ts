@@ -31,7 +31,7 @@ class meydaHandler implements FormatHandler {
       to: true,
       internal: "audio",
       category: "audio",
-      lossless: false // Lossy reconstruction 
+      lossless: false // Lossy reconstruction
     });
     if (dummy.canPlayType("audio/mpeg")) this.supportedFormats.push(
       // lossless=false, lossy reconstruction 
@@ -46,7 +46,7 @@ class meydaHandler implements FormatHandler {
       to: false,
       internal: "audio",
       category: "audio",
-      lossless: false // Lossy reconstruction 
+      lossless: false // Lossy reconstruction
     });
     if (dummy.canPlayType("audio/flac")) this.supportedFormats.push({
       name: "Free Lossless Audio Codec",
@@ -57,7 +57,7 @@ class meydaHandler implements FormatHandler {
       to: false,
       internal: "audio",
       category: "audio",
-      lossless: false // Lossy reconstruction 
+      lossless: false // Lossy reconstruction
     });
     dummy.remove();
 
@@ -73,7 +73,7 @@ class meydaHandler implements FormatHandler {
     this.ready = true;
 
   }
-  
+
   async doConvert (
     inputFiles: FileData[],
     inputFormat: FileFormat,

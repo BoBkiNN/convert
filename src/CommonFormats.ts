@@ -76,7 +76,8 @@ const CommonFormats = {
         "Markdown Document",
         "md",
         "md",
-        "text/markdown"
+        "text/markdown",
+        ["document", "text"]
     ),
     // audio
     MP3: new FormatDefinition(

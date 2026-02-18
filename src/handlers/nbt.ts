@@ -70,10 +70,10 @@ class nbtHandler implements FormatHandler {
                 })
             }
         }
-        
+
         // snbt <-> nbt
         if (inputFormat.internal == "snbt" && outputFormat.internal == "nbt") {
-            for (const file of inputFiles) { 
+            for (const file of inputFiles) {
                 const text = decoder.decode(file.bytes)
                 const nbt = NBT.parse(text)
                 const bd = await NBT.write(nbt)
