@@ -9,7 +9,8 @@ const Category = {
     TEXT: "text",
     AUDIO: "audio",
     ARCHIVE: "archive",
-    SPREADSHEET: "spreadsheet"
+    SPREADSHEET: "spreadsheet",
+    PRESENTATION: "presentation"
 }
 
 /**
@@ -169,6 +170,13 @@ const CommonFormats = {
         "xlsx",
         "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
         [Category.SPREADSHEET, Category.DOCUMENT]
+    ),
+    PPTX: new FormatDefinition(
+        "Microsoft Office 365 Presentation",
+        "pptx",
+        "pptx",
+        "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+        Category.PRESENTATION
     )
 }
 

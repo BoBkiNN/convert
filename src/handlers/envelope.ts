@@ -12,16 +12,7 @@ class envelopeHandler implements FormatHandler {
 
   public supportedFormats: FileFormat[] = [
     CommonFormats.DOCX.builder("docx").allowFrom(),
-    {
-      name: "Microsoft Office 365 Presentation",
-      format: "pptx",
-      extension: "pptx",
-      mime: "application/vnd.openxmlformats-officedocument.presentationml.presentation",
-      from: true,
-      to: false,
-      internal: "pptx",
-      category: "presentation"
-    },
+    CommonFormats.PPTX.builder("pptx").allowFrom(),
     CommonFormats.XLSX.builder("xlsx").allowFrom(),
     {
       name: "OpenDocument Text",
