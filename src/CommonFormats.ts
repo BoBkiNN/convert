@@ -124,6 +124,14 @@ const CommonFormats = {
         "zip",
         "application/zip",
         Category.ARCHIVE
+    ),
+    // documents
+    PDF: new FormatDefinition(
+        "Portable Document Format",
+        "pdf",
+        "pdf",
+        "application/pdf",
+        Category.DOCUMENT
     )
 }
 
