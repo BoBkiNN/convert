@@ -20,16 +20,7 @@ export class toJsonHandler implements FormatHandler {
       category: "data"
     },
     CommonFormats.XML.builder("xml").allowFrom(),
-    {
-      name: "YAML Ain't Markup Language",
-      format: "yaml",
-      extension: "yml",
-      mime: "application/yaml",
-      from: true,
-      to: false,
-      internal: "yaml",
-      category: "data"
-    },
+    CommonFormats.YML.builder("yaml").allowFrom(),
     CommonFormats.JSON.supported("json", false, true, true)
   ];
 
@@ -104,15 +95,7 @@ export class fromJsonHandler {
       internal: "csv"
     },
     CommonFormats.XML.builder("xml").allowTo(),
-    {
-      name: "YAML Ain't Markup Language",
-      format: "yaml",
-      extension: "yml",
-      mime: "application/yaml",
-      from: false,
-      to: true,
-      internal: "yaml"
-    },
+    CommonFormats.YML.builder("yaml").allowTo(),
     CommonFormats.JSON.supported("json", true, false)
   ];
 

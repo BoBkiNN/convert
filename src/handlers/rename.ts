@@ -179,13 +179,5 @@ export const renameTxtHandler = renameHandler("renametxt", [
     internal: "json"
   },
   CommonFormats.XML.builder("xml").allowFrom(),
-  {
-    name: "YAML Ain't Markup Language",
-    format: "yaml",
-    extension: "yml",
-    mime: "application/yaml",
-    from: true,
-    to: false,
-    internal: "yaml"
-  },
+  CommonFormats.YML.builder("yaml").allowFrom()
 ])

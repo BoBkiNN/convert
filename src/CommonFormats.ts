@@ -65,6 +65,13 @@ const CommonFormats = {
         "application/xml",
         Category.DATA
     ),
+    YML: new FormatDefinition(
+        "YAML Ain't Markup Language",
+        "yaml",
+        "yml",
+        "application/yaml",
+        Category.DATA
+    ),
     TEXT: new FormatDefinition(
         "Plain Text",
         "text",
