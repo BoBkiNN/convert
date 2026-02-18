@@ -1,3 +1,4 @@
+import CommonFormats from "src/CommonFormats.ts";
 import type { FileData, FileFormat, FormatHandler } from "../FormatHandler.ts";
 
 // base class for handling renames
@@ -177,15 +178,7 @@ export const renameTxtHandler = renameHandler("renametxt", [
     to: false,
     internal: "json"
   },
-  {
-    name: "Extensible Markup Language",
-    format: "xml",
-    extension: "xml",
-    mime: "application/xml",
-    from: true,
-    to: false,
-    internal: "xml"
-  },
+  CommonFormats.XML.builder("xml").allowFrom(),
   {
     name: "YAML Ain't Markup Language",
     format: "yaml",

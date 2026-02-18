@@ -58,6 +58,13 @@ const CommonFormats = {
         "application/json",
         Category.DATA
     ),
+    XML: new FormatDefinition(
+        "Extensible Markup Language",
+        "xml",
+        "xml",
+        "application/xml",
+        Category.DATA
+    ),
     TEXT: new FormatDefinition(
         "Plain Text",
         "text",
