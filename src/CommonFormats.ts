@@ -7,7 +7,8 @@ const Category = {
     VECTOR: "vector",
     DOCUMENT: "document",
     TEXT: "text",
-    AUDIO: "audio"
+    AUDIO: "audio",
+    ARCHIVE: "archive"
 }
 
 /**
@@ -107,6 +108,14 @@ const CommonFormats = {
         "mp3",
         "audio/mpeg",
         Category.AUDIO
+    ),
+    // archive
+    ZIP: new FormatDefinition(
+        "ZIP Archive",
+        "zip",
+        "zip",
+        "application/zip",
+        Category.ARCHIVE
     )
 }
 

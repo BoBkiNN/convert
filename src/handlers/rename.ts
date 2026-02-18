@@ -24,16 +24,7 @@ function renameHandler(name: string, formats: FileFormat[]): FormatHandler {
 }
 /// handler for renaming various aliased zip files
 export const renameZipHandler = renameHandler("renamezip", [
-  {
-    name: "ZIP Archive",
-    format: "zip",
-    extension: "zip",
-    mime: "application/zip",
-    from: false,
-    to: true,
-    internal: "zip",
-    category: "archive",
-  },
+  CommonFormats.ZIP.builder("zip").allowTo(),
   {
     name: "Microsoft Office 365 Word Document",
     format: "docx",
@@ -103,42 +94,12 @@ export const renameZipHandler = renameHandler("renamezip", [
     to: false,
     internal: "xpi"
   },
-  {
-    name: "LÖVE Game Package",
-    format: "love",
-    extension: "love",
-    mime: "application/zip",
-    from: true,
-    to: false,
-    internal: "love"
-  },
-  {
-    name: "LÖVE Game Package",
-    format: "love",
-    extension: "love",
-    mime: "application/zip",
-    from: true,
-    to: false,
-    internal: "love"
-  },
-  {
-    name: "osu! Beatmap",
-    format: "osz",
-    extension: "osz",
-    mime: "application/zip",
-    from: true,
-    to: false,
-    internal: "osz"
-  },
-  {
-    name: "osu! Skin",
-    format: "osk",
-    extension: "osk",
-    mime: "application/zip",
-    from: true,
-    to: false,
-    internal: "osk"
-  },
+  CommonFormats.ZIP.builder("love").allowFrom()
+    .withformat("love").withExt("love").named("LÖVE Game Package"),
+  CommonFormats.ZIP.builder("osz").allowFrom()
+    .withformat("osz").withExt("osz").named("osu! Beatmap"),
+  CommonFormats.ZIP.builder("osk").allowFrom()
+    .withformat("osk").withExt("osk").named("osu! Skin"),
   {
     name: "Java Archive",
     format: "jar",
