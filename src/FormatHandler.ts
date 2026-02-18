@@ -35,9 +35,15 @@ export class FormatDefinition implements IFormatDefinition {
   public readonly format: string;
   public readonly extension: string;
   public readonly mime: string;
-  public readonly category?: Array<string> | string
+  public readonly category?: string[] | string
 
-  constructor(name: string, format: string, extension: string, mime: string, category?: Array<string> | string) {
+  constructor(
+    name: string, 
+    format: string, 
+    extension: string, 
+    mime: string, 
+    category?: string[] | string
+  ) {
     this.name = name
     this.format = format
     this.extension = extension
