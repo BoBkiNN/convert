@@ -116,6 +116,13 @@ const CommonFormats = {
         "audio/wav",
         Category.AUDIO
     ),
+    OGG: new FormatDefinition(
+        "Ogg Audio",
+        "ogg",
+        "ogg",
+        "audio/ogg",
+        Category.AUDIO
+    ),
     // video
     MP4: new FormatDefinition(
         "MPEG-4 Part 14",
