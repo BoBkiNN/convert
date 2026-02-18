@@ -91,16 +91,16 @@ export class FormatDefinition implements IFormatDefinition {
       to: false,
       lossless: false,
 
-      allowFrom() {
-        this.from = true;
+      allowFrom(value: boolean = true) {
+        this.from = value;
         return this;
       },
-      allowTo() {
-        this.to = true;
+      allowTo(value: boolean = true) {
+        this.to = value;
         return this;
       },
-      markLossless() {
-        this.lossless = true;
+      markLossless(value: boolean = true) {
+        this.lossless = value;
         return this;
       },
       named(name: string) {
