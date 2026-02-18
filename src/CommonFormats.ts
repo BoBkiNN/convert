@@ -109,6 +109,14 @@ const CommonFormats = {
         "audio/mpeg",
         Category.AUDIO
     ),
+    // video
+    MP4: new FormatDefinition(
+        "MPEG-4 Part 14",
+        "mp4",
+        "mp4",
+        "video/mp4",
+        Category.VIDEO
+    ),
     // archive
     ZIP: new FormatDefinition(
         "ZIP Archive",
